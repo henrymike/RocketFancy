@@ -1,0 +1,10 @@
+platform :ios, '12.0'
+
+target 'RocketFancy' do
+  use_frameworks!
+
+  # Pods for RocketFancy
+  pod 'Alamofire', '~> 4.7'
+  pod 'SwiftyJSON', '~> 4.0'
+
+end
