@@ -18,11 +18,11 @@ class NetworkManager: NSObject {
     
     //MARK: - Networking Methods
     func fetchData() {
-        print("URLRequest: \(SpaceXRouter.events.urlRequest!)")
-        Alamofire.request(SpaceXRouter.events.urlRequest!).responseJSON { response in
+        print("URLRequest: \(SpaceXRouter.launches.urlRequest!)")
+        Alamofire.request(SpaceXRouter.launches.urlRequest!).responseJSON { response in
             guard response.result.isSuccess,
                 let value = response.result.value else {
-                    print("Error while fetching events: \(String(describing: response.result.error))")
+                    print("Error while fetching launches: \(String(describing: response.result.error))")
                     //                    completion(nil)
                     return
             }

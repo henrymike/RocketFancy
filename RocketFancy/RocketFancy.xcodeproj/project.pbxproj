@@ -7,108 +7,108 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3BC1E6B9D900259527ACDB93 /* Pods_RocketFancy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56C3DD71CE76278FE8DA459E /* Pods_RocketFancy.framework */; };
-		553C3D182177ED25009CBA17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553C3D172177ED25009CBA17 /* AppDelegate.swift */; };
-		553C3D1A2177ED25009CBA17 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553C3D192177ED25009CBA17 /* ViewController.swift */; };
-		553C3D1D2177ED25009CBA17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 553C3D1B2177ED25009CBA17 /* Main.storyboard */; };
-		553C3D202177ED26009CBA17 /* RocketFancy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 553C3D1E2177ED26009CBA17 /* RocketFancy.xcdatamodeld */; };
-		553C3D222177ED26009CBA17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 553C3D212177ED26009CBA17 /* Assets.xcassets */; };
-		553C3D252177ED26009CBA17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 553C3D232177ED26009CBA17 /* LaunchScreen.storyboard */; };
-		553C3D2D2177EDE7009CBA17 /* SpaceXRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553C3D2C2177EDE7009CBA17 /* SpaceXRouter.swift */; };
-		553C3D2F2177EE47009CBA17 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553C3D2E2177EE47009CBA17 /* NetworkManager.swift */; };
+		371609F26A4A1CE130EC7E3B /* Pods_RocketFancy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 355CE77BA721B9452C1BB3F9 /* Pods_RocketFancy.framework */; };
+		552AC040217800C40093691B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552AC03F217800C40093691B /* AppDelegate.swift */; };
+		552AC042217800C40093691B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552AC041217800C40093691B /* ViewController.swift */; };
+		552AC045217800C40093691B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 552AC043217800C40093691B /* Main.storyboard */; };
+		552AC048217800C40093691B /* RocketFancy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 552AC046217800C40093691B /* RocketFancy.xcdatamodeld */; };
+		552AC04A217800C40093691B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 552AC049217800C40093691B /* Assets.xcassets */; };
+		552AC04D217800C40093691B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 552AC04B217800C40093691B /* LaunchScreen.storyboard */; };
+		552AC0552178026F0093691B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552AC0542178026F0093691B /* NetworkManager.swift */; };
+		552AC057217802870093691B /* SpaceXRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552AC056217802870093691B /* SpaceXRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		32BDC30A4E8ED5D7DA859837 /* Pods-RocketFancy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RocketFancy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RocketFancy/Pods-RocketFancy.debug.xcconfig"; sourceTree = "<group>"; };
-		553C3D142177ED25009CBA17 /* RocketFancy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RocketFancy.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		553C3D172177ED25009CBA17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		553C3D192177ED25009CBA17 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		553C3D1C2177ED25009CBA17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		553C3D1F2177ED26009CBA17 /* RocketFancy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RocketFancy.xcdatamodel; sourceTree = "<group>"; };
-		553C3D212177ED26009CBA17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		553C3D242177ED26009CBA17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		553C3D262177ED26009CBA17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		553C3D2C2177EDE7009CBA17 /* SpaceXRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceXRouter.swift; sourceTree = "<group>"; };
-		553C3D2E2177EE47009CBA17 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		56C3DD71CE76278FE8DA459E /* Pods_RocketFancy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RocketFancy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8680B93BC1ADCBB838D8F6EA /* Pods-RocketFancy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RocketFancy.release.xcconfig"; path = "Pods/Target Support Files/Pods-RocketFancy/Pods-RocketFancy.release.xcconfig"; sourceTree = "<group>"; };
+		0DFDCB49E848FBF65625AA29 /* Pods-RocketFancy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RocketFancy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RocketFancy/Pods-RocketFancy.debug.xcconfig"; sourceTree = "<group>"; };
+		355CE77BA721B9452C1BB3F9 /* Pods_RocketFancy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RocketFancy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		552AC03C217800C40093691B /* RocketFancy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RocketFancy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		552AC03F217800C40093691B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		552AC041217800C40093691B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		552AC044217800C40093691B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		552AC047217800C40093691B /* RocketFancy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RocketFancy.xcdatamodel; sourceTree = "<group>"; };
+		552AC049217800C40093691B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		552AC04C217800C40093691B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		552AC04E217800C40093691B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		552AC0542178026F0093691B /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		552AC056217802870093691B /* SpaceXRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceXRouter.swift; sourceTree = "<group>"; };
+		E93869B655DA07FC5DF64909 /* Pods-RocketFancy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RocketFancy.release.xcconfig"; path = "Pods/Target Support Files/Pods-RocketFancy/Pods-RocketFancy.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		553C3D112177ED25009CBA17 /* Frameworks */ = {
+		552AC039217800C40093691B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3BC1E6B9D900259527ACDB93 /* Pods_RocketFancy.framework in Frameworks */,
+				371609F26A4A1CE130EC7E3B /* Pods_RocketFancy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		553C3D0B2177ED25009CBA17 = {
+		02BD534D6DCF9856DAFFC074 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				553C3D162177ED25009CBA17 /* RocketFancy */,
-				553C3D152177ED25009CBA17 /* Products */,
-				807ADD63DDA2FAA469C637FA /* Pods */,
-				76B60EE0C4FF0275B5F932E2 /* Frameworks */,
+				0DFDCB49E848FBF65625AA29 /* Pods-RocketFancy.debug.xcconfig */,
+				E93869B655DA07FC5DF64909 /* Pods-RocketFancy.release.xcconfig */,
 			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
-		553C3D152177ED25009CBA17 /* Products */ = {
+		04E4002AF141B8955571A716 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				553C3D142177ED25009CBA17 /* RocketFancy.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		553C3D162177ED25009CBA17 /* RocketFancy */ = {
-			isa = PBXGroup;
-			children = (
-				553C3D172177ED25009CBA17 /* AppDelegate.swift */,
-				553C3D192177ED25009CBA17 /* ViewController.swift */,
-				553C3D2C2177EDE7009CBA17 /* SpaceXRouter.swift */,
-				553C3D2E2177EE47009CBA17 /* NetworkManager.swift */,
-				553C3D1B2177ED25009CBA17 /* Main.storyboard */,
-				553C3D212177ED26009CBA17 /* Assets.xcassets */,
-				553C3D232177ED26009CBA17 /* LaunchScreen.storyboard */,
-				553C3D262177ED26009CBA17 /* Info.plist */,
-				553C3D1E2177ED26009CBA17 /* RocketFancy.xcdatamodeld */,
-			);
-			path = RocketFancy;
-			sourceTree = "<group>";
-		};
-		76B60EE0C4FF0275B5F932E2 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				56C3DD71CE76278FE8DA459E /* Pods_RocketFancy.framework */,
+				355CE77BA721B9452C1BB3F9 /* Pods_RocketFancy.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		807ADD63DDA2FAA469C637FA /* Pods */ = {
+		552AC033217800C40093691B = {
 			isa = PBXGroup;
 			children = (
-				32BDC30A4E8ED5D7DA859837 /* Pods-RocketFancy.debug.xcconfig */,
-				8680B93BC1ADCBB838D8F6EA /* Pods-RocketFancy.release.xcconfig */,
+				552AC03E217800C40093691B /* RocketFancy */,
+				552AC03D217800C40093691B /* Products */,
+				02BD534D6DCF9856DAFFC074 /* Pods */,
+				04E4002AF141B8955571A716 /* Frameworks */,
 			);
-			name = Pods;
+			sourceTree = "<group>";
+		};
+		552AC03D217800C40093691B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				552AC03C217800C40093691B /* RocketFancy.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		552AC03E217800C40093691B /* RocketFancy */ = {
+			isa = PBXGroup;
+			children = (
+				552AC03F217800C40093691B /* AppDelegate.swift */,
+				552AC0542178026F0093691B /* NetworkManager.swift */,
+				552AC056217802870093691B /* SpaceXRouter.swift */,
+				552AC041217800C40093691B /* ViewController.swift */,
+				552AC043217800C40093691B /* Main.storyboard */,
+				552AC049217800C40093691B /* Assets.xcassets */,
+				552AC04B217800C40093691B /* LaunchScreen.storyboard */,
+				552AC04E217800C40093691B /* Info.plist */,
+				552AC046217800C40093691B /* RocketFancy.xcdatamodeld */,
+			);
+			path = RocketFancy;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		553C3D132177ED25009CBA17 /* RocketFancy */ = {
+		552AC03B217800C40093691B /* RocketFancy */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 553C3D292177ED26009CBA17 /* Build configuration list for PBXNativeTarget "RocketFancy" */;
+			buildConfigurationList = 552AC051217800C40093691B /* Build configuration list for PBXNativeTarget "RocketFancy" */;
 			buildPhases = (
-				930C83D5E7DE7B5D6D29440F /* [CP] Check Pods Manifest.lock */,
-				553C3D102177ED25009CBA17 /* Sources */,
-				553C3D112177ED25009CBA17 /* Frameworks */,
-				553C3D122177ED25009CBA17 /* Resources */,
-				96F19152B17055C23F3ADC40 /* [CP] Embed Pods Frameworks */,
+				48E6C7CD9B860D2A508E931F /* [CP] Check Pods Manifest.lock */,
+				552AC038217800C40093691B /* Sources */,
+				552AC039217800C40093691B /* Frameworks */,
+				552AC03A217800C40093691B /* Resources */,
+				926D1FD0AF682DF5F77219A7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -116,25 +116,25 @@
 			);
 			name = RocketFancy;
 			productName = RocketFancy;
-			productReference = 553C3D142177ED25009CBA17 /* RocketFancy.app */;
+			productReference = 552AC03C217800C40093691B /* RocketFancy.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		553C3D0C2177ED25009CBA17 /* Project object */ = {
+		552AC034217800C40093691B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1000;
 				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = "Mike Henry";
 				TargetAttributes = {
-					553C3D132177ED25009CBA17 = {
+					552AC03B217800C40093691B = {
 						CreatedOnToolsVersion = 10.0;
 					};
 				};
 			};
-			buildConfigurationList = 553C3D0F2177ED25009CBA17 /* Build configuration list for PBXProject "RocketFancy" */;
+			buildConfigurationList = 552AC037217800C40093691B /* Build configuration list for PBXProject "RocketFancy" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -142,31 +142,31 @@
 				en,
 				Base,
 			);
-			mainGroup = 553C3D0B2177ED25009CBA17;
-			productRefGroup = 553C3D152177ED25009CBA17 /* Products */;
+			mainGroup = 552AC033217800C40093691B;
+			productRefGroup = 552AC03D217800C40093691B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				553C3D132177ED25009CBA17 /* RocketFancy */,
+				552AC03B217800C40093691B /* RocketFancy */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		553C3D122177ED25009CBA17 /* Resources */ = {
+		552AC03A217800C40093691B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				553C3D252177ED26009CBA17 /* LaunchScreen.storyboard in Resources */,
-				553C3D222177ED26009CBA17 /* Assets.xcassets in Resources */,
-				553C3D1D2177ED25009CBA17 /* Main.storyboard in Resources */,
+				552AC04D217800C40093691B /* LaunchScreen.storyboard in Resources */,
+				552AC04A217800C40093691B /* Assets.xcassets in Resources */,
+				552AC045217800C40093691B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		930C83D5E7DE7B5D6D29440F /* [CP] Check Pods Manifest.lock */ = {
+		48E6C7CD9B860D2A508E931F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -188,7 +188,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		96F19152B17055C23F3ADC40 /* [CP] Embed Pods Frameworks */ = {
+		926D1FD0AF682DF5F77219A7 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -215,33 +215,33 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		553C3D102177ED25009CBA17 /* Sources */ = {
+		552AC038217800C40093691B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				553C3D202177ED26009CBA17 /* RocketFancy.xcdatamodeld in Sources */,
-				553C3D1A2177ED25009CBA17 /* ViewController.swift in Sources */,
-				553C3D2F2177EE47009CBA17 /* NetworkManager.swift in Sources */,
-				553C3D2D2177EDE7009CBA17 /* SpaceXRouter.swift in Sources */,
-				553C3D182177ED25009CBA17 /* AppDelegate.swift in Sources */,
+				552AC0552178026F0093691B /* NetworkManager.swift in Sources */,
+				552AC057217802870093691B /* SpaceXRouter.swift in Sources */,
+				552AC048217800C40093691B /* RocketFancy.xcdatamodeld in Sources */,
+				552AC042217800C40093691B /* ViewController.swift in Sources */,
+				552AC040217800C40093691B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		553C3D1B2177ED25009CBA17 /* Main.storyboard */ = {
+		552AC043217800C40093691B /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				553C3D1C2177ED25009CBA17 /* Base */,
+				552AC044217800C40093691B /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		553C3D232177ED26009CBA17 /* LaunchScreen.storyboard */ = {
+		552AC04B217800C40093691B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				553C3D242177ED26009CBA17 /* Base */,
+				552AC04C217800C40093691B /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -249,7 +249,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		553C3D272177ED26009CBA17 /* Debug */ = {
+		552AC04F217800C40093691B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -310,7 +310,7 @@
 			};
 			name = Debug;
 		};
-		553C3D282177ED26009CBA17 /* Release */ = {
+		552AC050217800C40093691B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -365,9 +365,9 @@
 			};
 			name = Release;
 		};
-		553C3D2A2177ED26009CBA17 /* Debug */ = {
+		552AC052217800C40093691B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 32BDC30A4E8ED5D7DA859837 /* Pods-RocketFancy.debug.xcconfig */;
+			baseConfigurationReference = 0DFDCB49E848FBF65625AA29 /* Pods-RocketFancy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -384,9 +384,9 @@
 			};
 			name = Debug;
 		};
-		553C3D2B2177ED26009CBA17 /* Release */ = {
+		552AC053217800C40093691B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8680B93BC1ADCBB838D8F6EA /* Pods-RocketFancy.release.xcconfig */;
+			baseConfigurationReference = E93869B655DA07FC5DF64909 /* Pods-RocketFancy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -406,20 +406,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		553C3D0F2177ED25009CBA17 /* Build configuration list for PBXProject "RocketFancy" */ = {
+		552AC037217800C40093691B /* Build configuration list for PBXProject "RocketFancy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				553C3D272177ED26009CBA17 /* Debug */,
-				553C3D282177ED26009CBA17 /* Release */,
+				552AC04F217800C40093691B /* Debug */,
+				552AC050217800C40093691B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		553C3D292177ED26009CBA17 /* Build configuration list for PBXNativeTarget "RocketFancy" */ = {
+		552AC051217800C40093691B /* Build configuration list for PBXNativeTarget "RocketFancy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				553C3D2A2177ED26009CBA17 /* Debug */,
-				553C3D2B2177ED26009CBA17 /* Release */,
+				552AC052217800C40093691B /* Debug */,
+				552AC053217800C40093691B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -427,17 +427,17 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		553C3D1E2177ED26009CBA17 /* RocketFancy.xcdatamodeld */ = {
+		552AC046217800C40093691B /* RocketFancy.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				553C3D1F2177ED26009CBA17 /* RocketFancy.xcdatamodel */,
+				552AC047217800C40093691B /* RocketFancy.xcdatamodel */,
 			);
-			currentVersion = 553C3D1F2177ED26009CBA17 /* RocketFancy.xcdatamodel */;
+			currentVersion = 552AC047217800C40093691B /* RocketFancy.xcdatamodel */;
 			path = RocketFancy.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */
 	};
-	rootObject = 553C3D0C2177ED25009CBA17 /* Project object */;
+	rootObject = 552AC034217800C40093691B /* Project object */;
 }
