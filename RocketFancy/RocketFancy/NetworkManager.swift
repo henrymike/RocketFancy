@@ -29,23 +29,24 @@ class NetworkManager: NSObject {
                 let json = JSON(value).arrayValue
                 for item in json {
                     print("1")
-                    if let entity = NSEntityDescription.entity(forEntityName: "Launch", in: context) {
-                        let launch = NSManagedObject(entity: entity, insertInto: context) as! Launch
+                    if let launch = NSEntityDescription.entity(forEntityName: "Launch", in: context) {
+                        let launchInfo = NSManagedObject(entity: launch, insertInto: context) as! Launch
                         if let flightNumber = item["flight_number"].int16 {
-                            launch.flightNumber = flightNumber
+                            launchInfo.flightNumber = flightNumber
                         }
-                        launch.hasLaunched = item["upcoming"].boolValue
-                        launch.imageMissionPatchUrl = item["mission_patch"].stringValue
-                        launch.launchDate = item["launch_date_local"].stringValue
-                        launch.launchSite = item["launch_site"]["site_name_long"].stringValue
-                        launch.launchSuccess = item["launch_success"].boolValue
+                        launchInfo.hasLaunched = item["upcoming"].boolValue
+                        launchInfo.imageMissionPatchUrl = item["mission_patch"].stringValue
+                        launchInfo.launchDate = item["launch_date_local"].stringValue
+                        launchInfo.launchSite = item["launch_site"]["site_name_long"].stringValue
+                        launchInfo.launchSuccess = item["launch_success"].boolValue
                         //                launch.launchToRocket = json[0]["rocket"]["rocket_name"].stringValue
-                        launch.launchYear = item["launch_year"].stringValue
-                        launch.missionName = item["mission_name"].stringValue
-                        launch.wikipediaLink = item["links"]["wikipedia"].stringValue
+                        launchInfo.launchYear = item["launch_year"].stringValue
+                        launchInfo.missionName = item["mission_name"].stringValue
+                        launchInfo.wikipediaLink = item["links"]["wikipedia"].stringValue
                         
-                        launches.append(launch)
-                        print("Appended launch: \(launch)")
+                        launches.append(launchInfo)
+                        self.appDelegate.saveContext()
+                        print("Appended launch: \(launchInfo)")
                     }
                 }
                 print("Count: \(launches.count)")

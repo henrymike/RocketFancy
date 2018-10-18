@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14315.18" systemVersion="18A391" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="1.0">
     <entity name="Launch" representedClassName="Launch" syncable="YES" codeGenerationType="class">
-        <attribute name="flightNumber" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="hasLaunched" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="imageMissionPatch" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
-        <attribute name="imageMissionPatchUrl" attributeType="String" syncable="YES"/>
-        <attribute name="launchDate" attributeType="String" syncable="YES"/>
-        <attribute name="launchSite" attributeType="String" syncable="YES"/>
-        <attribute name="launchSuccess" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="launchYear" attributeType="String" syncable="YES"/>
-        <attribute name="missionName" attributeType="String" syncable="YES"/>
-        <attribute name="wikipediaLink" attributeType="String" syncable="YES"/>
+        <attribute name="flightNumber" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="hasLaunched" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="imageMissionPatch" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
+        <attribute name="imageMissionPatchUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="launchDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="launchSite" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="launchSuccess" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="launchYear" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="missionName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="wikipediaLink" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="launchToRocket" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Rocket" inverseName="rocketToLaunches" inverseEntity="Rocket" syncable="YES"/>
     </entity>
     <entity name="Rocket" representedClassName="Rocket" syncable="YES" codeGenerationType="class">
-        <attribute name="rocketId" attributeType="String" syncable="YES"/>
-        <attribute name="rocketName" attributeType="String" syncable="YES"/>
-        <attribute name="rocketType" attributeType="String" syncable="YES"/>
+        <attribute name="rocketId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rocketName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rocketType" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="rocketToLaunches" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Launch" inverseName="launchToRocket" inverseEntity="Launch" syncable="YES"/>
     </entity>
     <elements>
