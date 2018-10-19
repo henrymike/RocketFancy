@@ -155,11 +155,11 @@ extension ViewController {
                         print("Appended launch: \(launchInfo)")
                     }
                 }
-                self.fetchCoreData()
             case .failure(let error):
                 print("Error while fetching from network: \(String(describing: error))")
-                return
             }
+            
+            self.fetchCoreData()
         }
     }
 }
