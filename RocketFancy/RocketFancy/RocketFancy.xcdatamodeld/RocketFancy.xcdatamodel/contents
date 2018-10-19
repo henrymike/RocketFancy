@@ -20,7 +20,7 @@
         <relationship name="rocketToLaunches" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Launch" inverseName="launchToRocket" inverseEntity="Launch" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Launch" positionX="-63" positionY="-18" width="128" height="210"/>
-        <element name="Rocket" positionX="-54" positionY="-9" width="128" height="105"/>
+        <element name="Launch" positionX="-63" positionY="-18" width="128" height="208"/>
+        <element name="Rocket" positionX="136.8984375" positionY="-17.5703125" width="128" height="105"/>
     </elements>
 </model>

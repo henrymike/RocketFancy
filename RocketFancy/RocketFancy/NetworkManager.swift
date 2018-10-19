@@ -35,8 +35,8 @@ class NetworkManager: NSObject {
                             launchInfo.flightNumber = flightNumber
                         }
                         launchInfo.hasLaunched = item["upcoming"].boolValue
-                        launchInfo.imageMissionPatchUrl = item["mission_patch"].stringValue
-                        launchInfo.launchDate = item["launch_date_local"].stringValue
+                        launchInfo.imageMissionPatchUrl = item["links"]["mission_patch"].stringValue
+                        launchInfo.launchDate = item["launch_date_utc"].stringValue
                         launchInfo.launchSite = item["launch_site"]["site_name_long"].stringValue
                         launchInfo.launchSuccess = item["launch_success"].boolValue
                         //                launch.launchToRocket = json[0]["rocket"]["rocket_name"].stringValue

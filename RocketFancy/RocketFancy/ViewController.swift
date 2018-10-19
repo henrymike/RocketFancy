@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import AlamofireImage
 
 class ViewController: UIViewController {
     
@@ -23,16 +24,19 @@ class ViewController: UIViewController {
         return launchFetchedResultsController
     }()
     private let launchPersistentContainer = NSPersistentContainer(name: "RocketFancy")
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tableView: UITableView! {
+        didSet {
+            tableView.rowHeight = UITableView.automaticDimension
+            tableView.estimatedRowHeight = 88.0
+        }
+    }
+    let imageCache = NSCache<NSString, UIImage>()
     //    var launchesArray = [Launch]()
     
     
     //MARK: - Life Cycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //        let request: NSFetchRequest = Launch.fetchRequest()
-        //        request.fetchBatchSize = 50
         
         do {
             try self.launchFetchedResultsController.performFetch()
@@ -42,21 +46,6 @@ class ViewController: UIViewController {
             print("Unable to perform fetch request: \(fetchError)")
         }
         print("Escaped trycatch block")
-        
-        //        launchPersistentContainer.loadPersistentStores { (persistentStore, error) in
-        //            if let error = error {
-        //                print("Unable to load persistent store: \(error)")
-        //            } else {
-        //                print("Persistent store loaded")
-        //                do {
-        //                    try self.launchFetchedResultsController.performFetch()
-        //                } catch {
-        //                    let fetchError = error as Error
-        //                    print("Unable to perform fetch request: \(fetchError)")
-        //                }
-        //                print("Fetch attempt successful")
-        //            }
-        //        }
         
         
         //Core Data Simple Fetch
@@ -74,12 +63,12 @@ class ViewController: UIViewController {
         //        }
         
         //Save Core Data Initially
-        //        networkManager.fetchData { (launches) in
-        //            if let unwrappedLaunches = launches {
-        //                self.launchesArray = unwrappedLaunches
-        //            }
-        //            print("Count: \(self.launchesArray.count)")
-        //        }
+//                networkManager.fetchData { (launches) in
+//                    if let unwrappedLaunches = launches {
+//                        self.launchesArray = unwrappedLaunches
+//                    }
+//                    print("Count: \(self.launchesArray.count)")
+//                }
         
     }
     
@@ -90,6 +79,19 @@ class ViewController: UIViewController {
             //            let request = Launch.create
         }
     }
+    
+    let dateFormatterRaw: Foundation.DateFormatter = {
+        let formatter = Foundation.DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+        return formatter
+    }()
+    
+    let dateFormatterDisplay: Foundation.DateFormatter = {
+        let formatter = Foundation.DateFormatter()
+        formatter.timeStyle = .short
+        formatter.dateStyle = .medium
+        return formatter
+    }()
     
     
 }
@@ -118,12 +120,21 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? LaunchTableViewCell else { return UITableViewCell() }
         let launch = launchFetchedResultsController.object(at: indexPath)
         
-        cell.textLabel?.text = String(launch.flightNumber)
-        cell.detailTextLabel?.text = launch.launchSite
+        let date: Date!; let dateString: String!
+        if let launchDate = launch.launchDate  {
+            date = dateFormatterRaw.date(from: launchDate)
+            dateString = dateFormatterDisplay.string(from: date)
+        } else { dateString = "" }
+        
+        cell.configureCellForLaunch(launch, launchDate: dateString)
+        
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 88.0
+    }
 }
-

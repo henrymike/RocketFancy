@@ -21,29 +21,60 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="Gub-p2-0w1" detailTextLabel="NL7-2J-gg2" style="IBUITableViewCellStyleValue2" id="6s2-dI-jbG">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="88" id="6s2-dI-jbG" customClass="LaunchTableViewCell" customModule="RocketFancy" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="88"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6s2-dI-jbG" id="bBi-JA-aFQ">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="87.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Gub-p2-0w1">
-                                                    <rect key="frame" x="15" y="14" width="91" height="16"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KpH-uy-xvL">
+                                                    <rect key="frame" x="15" y="11" width="60" height="60"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="60" id="BYw-Qs-6mn"/>
+                                                        <constraint firstAttribute="width" secondItem="KpH-uy-xvL" secondAttribute="height" id="wjV-6u-9XR"/>
+                                                        <constraint firstAttribute="height" constant="60" id="y0H-eB-MQd"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AsiaSat 6" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zNv-EF-5h9">
+                                                    <rect key="frame" x="83" y="11" width="277" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NL7-2J-gg2">
-                                                    <rect key="frame" x="112" y="14" width="35" height="16"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cape Canaveral, FL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZxZ-1B-6w4">
+                                                    <rect key="frame" x="83" y="33" width="277" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feb 26, 2018" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qMo-SZ-72J">
+                                                    <rect key="frame" x="83" y="56" width="277" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ZxZ-1B-6w4" firstAttribute="top" secondItem="zNv-EF-5h9" secondAttribute="bottom" constant="1" id="2XX-RL-Yvq"/>
+                                                <constraint firstItem="zNv-EF-5h9" firstAttribute="top" secondItem="bBi-JA-aFQ" secondAttribute="top" constant="11" id="B61-DF-cAK"/>
+                                                <constraint firstAttribute="trailing" secondItem="zNv-EF-5h9" secondAttribute="trailing" constant="15" id="Ons-ZL-Ycb"/>
+                                                <constraint firstItem="zNv-EF-5h9" firstAttribute="leading" secondItem="KpH-uy-xvL" secondAttribute="trailing" constant="8" id="OuL-YA-Dor"/>
+                                                <constraint firstAttribute="trailing" secondItem="ZxZ-1B-6w4" secondAttribute="trailing" constant="15" id="R8h-db-tVd"/>
+                                                <constraint firstItem="qMo-SZ-72J" firstAttribute="top" secondItem="ZxZ-1B-6w4" secondAttribute="bottom" constant="2" id="RVN-g9-YIh"/>
+                                                <constraint firstItem="KpH-uy-xvL" firstAttribute="leading" secondItem="bBi-JA-aFQ" secondAttribute="leading" constant="15" id="SWz-v7-ILV"/>
+                                                <constraint firstItem="KpH-uy-xvL" firstAttribute="top" secondItem="bBi-JA-aFQ" secondAttribute="top" constant="11" id="T8V-2K-OEb"/>
+                                                <constraint firstItem="qMo-SZ-72J" firstAttribute="leading" secondItem="zNv-EF-5h9" secondAttribute="leading" id="hKA-RT-y5r"/>
+                                                <constraint firstItem="ZxZ-1B-6w4" firstAttribute="leading" secondItem="zNv-EF-5h9" secondAttribute="leading" id="jcm-WU-L0A"/>
+                                                <constraint firstAttribute="trailing" secondItem="qMo-SZ-72J" secondAttribute="trailing" constant="15" id="n6K-rk-YHV"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="qMo-SZ-72J" id="amC-VQ-d3k"/>
+                                            <outlet property="locationLabel" destination="ZxZ-1B-6w4" id="9l1-cb-P5j"/>
+                                            <outlet property="missionImageView" destination="KpH-uy-xvL" id="YhC-c9-dfb"/>
+                                            <outlet property="missionLabel" destination="zNv-EF-5h9" id="LbU-Td-0hu"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
@@ -68,6 +99,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="116.49175412293854"/>
         </scene>
     </scenes>
 </document>

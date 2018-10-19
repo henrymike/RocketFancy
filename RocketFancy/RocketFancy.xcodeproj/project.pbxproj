@@ -16,6 +16,7 @@
 		552AC0552178026F0093691B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552AC0542178026F0093691B /* NetworkManager.swift */; };
 		552AC057217802870093691B /* SpaceXRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552AC056217802870093691B /* SpaceXRouter.swift */; };
 		552AC05B217804520093691B /* RocketFancy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 552AC059217804520093691B /* RocketFancy.xcdatamodeld */; };
+		552AC06F2179482F0093691B /* LaunchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552AC06E2179482F0093691B /* LaunchTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		552AC0542178026F0093691B /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		552AC056217802870093691B /* SpaceXRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceXRouter.swift; sourceTree = "<group>"; };
 		552AC05A217804520093691B /* RocketFancy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RocketFancy.xcdatamodel; sourceTree = "<group>"; };
+		552AC06E2179482F0093691B /* LaunchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchTableViewCell.swift; sourceTree = "<group>"; };
 		E93869B655DA07FC5DF64909 /* Pods-RocketFancy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RocketFancy.release.xcconfig"; path = "Pods/Target Support Files/Pods-RocketFancy/Pods-RocketFancy.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -89,6 +91,7 @@
 				552AC056217802870093691B /* SpaceXRouter.swift */,
 				552AC041217800C40093691B /* ViewController.swift */,
 				552AC043217800C40093691B /* Main.storyboard */,
+				552AC06E2179482F0093691B /* LaunchTableViewCell.swift */,
 				552AC049217800C40093691B /* Assets.xcassets */,
 				552AC04B217800C40093691B /* LaunchScreen.storyboard */,
 				552AC059217804520093691B /* RocketFancy.xcdatamodeld */,
@@ -198,6 +201,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-RocketFancy/Pods-RocketFancy-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -205,6 +209,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -223,6 +228,7 @@
 				552AC057217802870093691B /* SpaceXRouter.swift in Sources */,
 				552AC042217800C40093691B /* ViewController.swift in Sources */,
 				552AC040217800C40093691B /* AppDelegate.swift in Sources */,
+				552AC06F2179482F0093691B /* LaunchTableViewCell.swift in Sources */,
 				552AC05B217804520093691B /* RocketFancy.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
