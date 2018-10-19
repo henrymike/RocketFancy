@@ -32,7 +32,6 @@ class ViewController: UIViewController {
             tableView.estimatedRowHeight = 88.0
         }
     }
-    let imageCache = NSCache<NSString, UIImage>()
     
     
     //MARK: - Life Cycle Methods
@@ -45,7 +44,7 @@ class ViewController: UIViewController {
         do {
             try self.launchFetchedResultsController.performFetch()
             tableView.reloadData()
-            print("Fetch attempt successful")
+            print("Fetch attempt successful; data reloaded")
         } catch {
             let fetchError = error as Error
             print("Unable to perform fetch request: \(fetchError)")
