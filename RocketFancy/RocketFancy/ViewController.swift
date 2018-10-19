@@ -38,51 +38,22 @@ class ViewController: UIViewController {
     //MARK: - Life Cycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        fetchData { (launches) in }
-        
+        fetchRemoteData()
+    }
+    
+    func fetchCoreData () {
         do {
             try self.launchFetchedResultsController.performFetch()
+            tableView.reloadData()
             print("Fetch attempt successful")
         } catch {
             let fetchError = error as Error
             print("Unable to perform fetch request: \(fetchError)")
         }
-        print("Escaped trycatch block")
-        
-        
-        //Core Data Simple Fetch
-        //        let context = self.appDelegate.persistentContainer.viewContext
-        //        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Launch")
-        //        request.returnsObjectsAsFaults = false
-        //
-        //        do {
-        //            let result = try context.fetch(request)
-        //            for data in result as! [NSManagedObject] {
-        //                print(data.value(forKey: "flightNumber") as! Int16)
-        //            }
-        //        } catch {
-        //            print("Core Data Fetch failure")
-        //        }
-        
-        //Save Core Data Initially
-//                networkManager.fetchData { (launches) in
-//                    if let unwrappedLaunches = launches {
-//                        self.launchesArray = unwrappedLaunches
-//                    }
-//                    print("Count: \(self.launchesArray.count)")
-//                }
-        
     }
     
     
-    //MARK: - Core Data Methods
-    func loadLaunchData() {
-        if launchFetchedResultsController == nil {
-            //            let request = Launch.create
-        }
-    }
-    
+    //MARK: - Date Formatter Methods
     let dateFormatterRaw: Foundation.DateFormatter = {
         let formatter = Foundation.DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
@@ -95,19 +66,17 @@ class ViewController: UIViewController {
         formatter.dateStyle = .medium
         return formatter
     }()
-    
-    
 }
 
 extension ViewController: NSFetchedResultsControllerDelegate {
-    func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
-        tableView.beginUpdates()
-    }
-    
-    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
-        tableView.endUpdates()
-        //reload tableView
-    }
+//    func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+//        tableView.beginUpdates()
+//    }
+//
+//    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+//        tableView.endUpdates()
+//        //reload tableView
+//    }
 }
 
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
@@ -144,12 +113,11 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
 
 extension ViewController {
     //MARK: - Networking Methods
-    func fetchData(completion: @escaping ([Launch]?) -> Void) {
+    func fetchRemoteData() {
         print("URLRequest: \(SpaceXRouter.launches.urlRequest!)")
         Alamofire.request(SpaceXRouter.launches.urlRequest!).responseJSON { response in
             switch response.result {
             case .success(let value):
-//                var launches = [Launch]()
                 let managedObjectContext = self.appDelegate.persistentContainer.viewContext
                 let json = JSON(value).arrayValue
                 let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Launch")
@@ -183,18 +151,15 @@ extension ViewController {
                         launchInfo.missionName = item["mission_name"].stringValue
                         launchInfo.wikipediaLink = item["links"]["wikipedia"].stringValue
                         
-//                        launches.append(launchInfo)
                         self.appDelegate.saveContext()
                         print("Appended launch: \(launchInfo)")
                     }
                 }
-//                print("Count: \(launches.count)")
-                
+                self.fetchCoreData()
             case .failure(let error):
                 print("Error while fetching from network: \(String(describing: error))")
                 return
             }
-            return
         }
     }
 }
