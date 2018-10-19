@@ -13,7 +13,6 @@
 		552AC045217800C40093691B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 552AC043217800C40093691B /* Main.storyboard */; };
 		552AC04A217800C40093691B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 552AC049217800C40093691B /* Assets.xcassets */; };
 		552AC04D217800C40093691B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 552AC04B217800C40093691B /* LaunchScreen.storyboard */; };
-		552AC0552178026F0093691B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552AC0542178026F0093691B /* NetworkManager.swift */; };
 		552AC057217802870093691B /* SpaceXRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552AC056217802870093691B /* SpaceXRouter.swift */; };
 		552AC05B217804520093691B /* RocketFancy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 552AC059217804520093691B /* RocketFancy.xcdatamodeld */; };
 		552AC06F2179482F0093691B /* LaunchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552AC06E2179482F0093691B /* LaunchTableViewCell.swift */; };
@@ -29,7 +28,6 @@
 		552AC049217800C40093691B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		552AC04C217800C40093691B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		552AC04E217800C40093691B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		552AC0542178026F0093691B /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		552AC056217802870093691B /* SpaceXRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceXRouter.swift; sourceTree = "<group>"; };
 		552AC05A217804520093691B /* RocketFancy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RocketFancy.xcdatamodel; sourceTree = "<group>"; };
 		552AC06E2179482F0093691B /* LaunchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchTableViewCell.swift; sourceTree = "<group>"; };
@@ -87,7 +85,6 @@
 			isa = PBXGroup;
 			children = (
 				552AC03F217800C40093691B /* AppDelegate.swift */,
-				552AC0542178026F0093691B /* NetworkManager.swift */,
 				552AC056217802870093691B /* SpaceXRouter.swift */,
 				552AC041217800C40093691B /* ViewController.swift */,
 				552AC043217800C40093691B /* Main.storyboard */,
@@ -224,7 +221,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				552AC0552178026F0093691B /* NetworkManager.swift in Sources */,
 				552AC057217802870093691B /* SpaceXRouter.swift in Sources */,
 				552AC042217800C40093691B /* ViewController.swift in Sources */,
 				552AC040217800C40093691B /* AppDelegate.swift in Sources */,

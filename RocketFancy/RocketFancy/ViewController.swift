@@ -8,14 +8,16 @@
 
 import UIKit
 import CoreData
+import SwiftyJSON
+import Alamofire
 import AlamofireImage
 
 class ViewController: UIViewController {
     
     
     //MARK: - Properties
-    let networkManager = NetworkManager.sharedInstance
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    private let launchPersistentContainer = NSPersistentContainer(name: "RocketFancy")
     private lazy var launchFetchedResultsController: NSFetchedResultsController<Launch> = {
         let fetchRequest: NSFetchRequest = Launch.fetchRequest()
         fetchRequest.sortDescriptors = [NSSortDescriptor(key: "flightNumber", ascending: true)]
@@ -23,7 +25,7 @@ class ViewController: UIViewController {
         launchFetchedResultsController.delegate = self
         return launchFetchedResultsController
     }()
-    private let launchPersistentContainer = NSPersistentContainer(name: "RocketFancy")
+    
     @IBOutlet weak var tableView: UITableView! {
         didSet {
             tableView.rowHeight = UITableView.automaticDimension
@@ -31,12 +33,13 @@ class ViewController: UIViewController {
         }
     }
     let imageCache = NSCache<NSString, UIImage>()
-    //    var launchesArray = [Launch]()
     
     
     //MARK: - Life Cycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        fetchData { (launches) in }
         
         do {
             try self.launchFetchedResultsController.performFetch()
@@ -136,5 +139,62 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 88.0
+    }
+}
+
+extension ViewController {
+    //MARK: - Networking Methods
+    func fetchData(completion: @escaping ([Launch]?) -> Void) {
+        print("URLRequest: \(SpaceXRouter.launches.urlRequest!)")
+        Alamofire.request(SpaceXRouter.launches.urlRequest!).responseJSON { response in
+            switch response.result {
+            case .success(let value):
+//                var launches = [Launch]()
+                let managedObjectContext = self.appDelegate.persistentContainer.viewContext
+                let json = JSON(value).arrayValue
+                let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Launch")
+                
+                for item in json {
+                    if let launchEntity = NSEntityDescription.entity(forEntityName: "Launch", in: managedObjectContext) {
+                        let launchInfo = NSManagedObject(entity: launchEntity, insertInto: managedObjectContext) as! Launch
+                        
+                        //Set flightNumber & check for existing entry in Core Data
+                        if let flightNumber = item["flight_number"].int16 {
+                            let predicate = NSPredicate(format: "%K == %i", "flightNumber", flightNumber)
+                            fetchRequest.predicate = predicate
+                            let fetchedResults = try? managedObjectContext.fetch(fetchRequest) as? [Launch]
+                            if let results = fetchedResults {
+                                if (results?.count)! > 0 {
+                                    print("Result found - continuing: \(String(describing: results))")
+                                    break
+                                }
+                            }
+                            launchInfo.flightNumber = flightNumber
+                        } else {
+                            print("Error: Missing unique Flight Number info. Put user error message here.")
+                            return
+                        }
+                        launchInfo.hasLaunched = item["upcoming"].boolValue
+                        launchInfo.imageMissionPatchUrl = item["links"]["mission_patch"].stringValue
+                        launchInfo.launchDate = item["launch_date_utc"].stringValue
+                        launchInfo.launchSite = item["launch_site"]["site_name_long"].stringValue
+                        launchInfo.launchSuccess = item["launch_success"].boolValue
+                        launchInfo.launchYear = item["launch_year"].stringValue
+                        launchInfo.missionName = item["mission_name"].stringValue
+                        launchInfo.wikipediaLink = item["links"]["wikipedia"].stringValue
+                        
+//                        launches.append(launchInfo)
+                        self.appDelegate.saveContext()
+                        print("Appended launch: \(launchInfo)")
+                    }
+                }
+//                print("Count: \(launches.count)")
+                
+            case .failure(let error):
+                print("Error while fetching from network: \(String(describing: error))")
+                return
+            }
+            return
+        }
     }
 }
